@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+
+  --Blue: hsl(223, 87%, 63%);
+
+  /* ### Secondary */
+
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+
+  /* ### Neutral */
+
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+.bold-text {
+  font-weight: 700;
+}
+
+.text-left {
+  text-align: left;
+}
+.extra-small {
+  font-size: 12px;
+}
+
+body {
+  font-size: 20px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.container {
+  max-width: 800px;
+}
+
+/*********************** launch *****************/
+
+.launch {
+  color: var(--Gray);
+}
+
+.subscribe {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/************************* form ******************/
+.email-container {
+  padding-left: 3rem;
+}
+
+.email {
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.email::placeholder {
+  color: var(--Gray);
+}
+
+.error {
+  visibility: hidden;
+}
+
+.button-container {
+  margin-left: 1rem;
+}
+
+.notify {
+  background-color: var(--Blue);
+  color: white;
+  padding: 10px 2rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.notify:hover {
+  background-color: var(--Pale-Blue);
+}
+
+/********************* Image ************************/
+.image-container {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.image-illustration-board {
+  width: 100%;
+}
+
+/********************** social media icons *******************/
+.fa-brands {
+  margin-right: 2rem;
+  color: var(--Blue);
+
+  padding: 10px;
+}
+
+.fa-brands:hover {
+  cursor: pointer;
+  background-color: var(--Blue);
+  color: white;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 425px) {
+  .notify {
+    padding: 10px 1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+  form{
+    position: relative;
+  }
+
+  .email-container {
+    padding-left: 2rem;
+    width: 100%;
+  }
+
+  .button-container{
+    width: 83%;
+    margin-left: 2rem;
+    position: absolute;
+    top: 4rem;
+  }
+
+  .notify{
+    width: 100%;
+  }
+
+  div.row > form {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .notify {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  div.container > p {
+    display: inline-block;
+    margin: 0!important;
+  }
+
+  .notify {
+    font-size: 10px;
+  }
+}
